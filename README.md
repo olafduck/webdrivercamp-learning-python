@@ -1,1 +1,1 @@
-# webdrivercamp-learning-python
+Basic Python learning repository.
