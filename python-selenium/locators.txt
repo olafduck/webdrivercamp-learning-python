@@ -1,0 +1,14 @@
+0. //div[@id="vl-flyout-nav"]//a[@href]
+1. //div[@class="x-refine__item__title-container"][contains(text(), 'Brand')]
+2. f'//div[@class="x-refine__item__title-container"][contains(text(), {section})]'
+3. //div[@class="x-refine__item__title-container"][contains(text(), 'Brand')]//ancestor::li//input[@aria-label="adidas"]
+
+//li[h3[contains(., 'Brand')]]//input[@aria-label="adidas"]
+
+   //div[@class="x-refine__item__title-container"][contains(text(), 'Color')]//ancestor::li//input[@aria-label="Blue"]
+4. //span[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'jordan air')]//ancestor::a[@href]
+5. setTimeout(() => {debugger}, 3000)
+   //div[@id="gh-eb-My-o"]//a[@href]
+
+6. //li[contains(@class, 's-item') and .//span[contains(@class, 's-item__price') and number(translate(text(), '$', '')) > 20 and number(translate(text(), '$', '')) < 200] and .//span[contains(text(), "5.0 out of 5 stars.")] and .//span[contains(text(), "Free shipping & returns")] and .//span[contains(@class, 'BOLD') and number(translate(text(), '% off', '')) > 20]]
+
