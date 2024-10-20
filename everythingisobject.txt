@@ -1,0 +1,270 @@
+Objects whose value can change are said to be mutable; objects whose value is unchangeable once they are created are called immutable.
+
+0. What function would you use to print the type of an object?
+
+type()
+
+1. How do you get the variable identifier (which is the memory address in the CPython implementation)?
+
+id()
+
+2. In the following code, do a and b point to the same object?
+
+No, they point to a different object.
+
+>>> a = 89
+>>> b = 100
+id(a)
+4366115056
+id(b)
+4366115408
+
+3. In the following code, do a and b point to the same object?
+
+Yes, they point to the same object.
+
+>>> a = 89
+>>> b = 89
+id(a)
+4366115056
+id(b)
+4366115056
+
+4. In the following code, do a and b point to the same object?
+
+>>> a = 89
+>>> b = a
+
+Yes, they point to the same object.
+
+
+5. In the following code, do a and b point to the same object?
+
+>>> a = 89
+>>> b = a + 1
+
+No, they don't.
+
+>>> id(a)
+4366115056
+>>> id(b)
+4366115088
+
+6. What does this print?
+
+>>> s1 = "Best School"
+>>> s2 = s1
+>>> print(s1 == s2)
+
+It prints True.
+
+7. What does this print?
+
+
+>>> s1 = "Best"
+>>> s2 = s1
+>>> print(s1 is s2)
+
+It prints True.
+
+8. What does this print?
+
+
+>>> s1 = "Best School"
+>>> s2 = "Best School"
+>>> print(s1 == s2)
+
+It prints True.
+
+9. What does this print?
+
+>>> s1 = "Best School"
+>>> s2 = "Best School"
+>>> print(s1 is s2)
+
+It prints False.
+
+10. What does this  print?
+
+>>> l1 = [1, 2, 3]
+>>> l2 = [1, 2, 3] 
+>>> print(l1 == l2)
+
+It prints True.
+
+11. What does this print?
+
+>>> l1 = [1, 2, 3]
+>>> l2 = [1, 2, 3] 
+>>> print(l1 is l2)
+
+It prints False. Two names have different places in memory.
+
+12. What does this print?
+
+>>> l1 = [1, 2, 3]
+>>> l2 = l1
+>>> print(l1 == l2)
+
+It prints True. Two names have the same value.
+
+13. What does this print?
+
+>>> l1 = [1, 2, 3]
+>>> l2 = l1
+>>> print(l1 is l2)
+
+It prints True. Two names have the same place in memory
+
+14. What does this print?
+
+l1 = [1, 2, 3]
+l2 = l1
+l1.append(4)
+print(l2)
+
+It prints [1, 2, 3, 4].
+
+15. What does this print?
+
+l1 = [1, 2, 3]
+l2 = l1
+l1 = l1 + [4]
+print(l2)
+
+It prints [1, 2, 3].
+
+16. What does this print?
+
+def increment(n):
+    n += 1
+a = 1
+increment(a)
+print(a)
+
+It prints 1.
+
+17. What does this print?
+
+def increment(n):
+    n.append(4)
+l = [1, 2, 3]
+increment(l)
+print(l)
+
+It prints [1, 2, 3, 4].
+
+18. What does this print?
+
+def assign_value(n, v):
+    n = v
+l1 = [1, 2, 3]
+l2 = [4, 5, 6]
+assign_value(l1, l2)
+print(l1)
+
+Prints [1, 2, 3].
+
+19. What would these lines print?
+
+>>> dict_ = {"WebDriver": "Camp"}
+>>> dict_copy = dict_
+print(dict_ == dict_copy)
+print(dict_ is dict_copy)
+
+It prints True and True.
+
+>>> dict_copy = dict_.copy()
+print(dict_ == dict_copy)
+print(dict_ is dict_copy)
+
+It prints True and False.
+
+19. What would these lines print?
+
+>>> list_ = [1, 2, 3, 4, 5]
+>>> list_copy = list_
+print(list_ == list_copy)
+print(list_ is list_copy)
+
+It prints True and True.
+
+>>> list_copy = list_.copy()
+print(list_ == list_copy)
+print(list_ is list_copy)
+
+It prints True and False.
+
+20. Tuple or not?
+
+a = ()
+
+Tuple.
+
+21. Tuple or not?
+
+a = (1, 2)
+
+Tuple
+
+22. Tuple or not?
+
+a = (1)
+
+No, it's an int.
+
+23. Tuple or not?
+
+a = (1, )
+b = 1,
+
+Both are tuples.
+
+24. What does this script print?
+
+a = (1)
+b = (1)
+a is b
+
+Prints True.
+
+25. What does this script print?
+
+a = (1, 2)
+b = (1, 2)
+a is b
+
+Prints False.
+
+26. What does this print?
+
+a = ()
+b = ()
+
+a is b
+
+Prints True.
+
+#Advanced
+270. What does this print?
+
+>>> id(a)
+139926795932424
+>>> a
+[1, 2, 3, 4]
+>>> a = a + [5]
+>>> id(a)
+
+It will print a new variable id, because it's reassigning to a new list.
+
+280. What does this print?
+
+>>> a
+[1, 2, 3]
+>>> id (a)
+139926795932424
+>>> a += [4]
+>>> id(a)
+
+It will print the same variable id, because it's the same as calling append.
+ 
